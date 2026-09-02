@@ -65,7 +65,7 @@ Prefer using the key **from code** — the OpenAI SDK, the Vercel AI SDK, the Op
 
 ## Build Week
 
-Seven days, ten winners, 20M `$ORBIO`. Every approved builder gets $100 of inference to start and a 20% boost on the credits their holdings earn.
+Seven days, ten winners, 8M `$ORBIO`. Every approved builder gets $100 of inference to start and a 20% boost on the credits their holdings earn.
 
 - Apply → [orbio.so/build](https://orbio.so/build)
 - The brief → [orbio.so/orbio-build-week.pdf](https://orbio.so/orbio-build-week.pdf)

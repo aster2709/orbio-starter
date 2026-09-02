@@ -6,12 +6,13 @@
  * themselves, OCR for the rest).
  *
  *   pnpm pdf https://example.com/paper.pdf "summarise the method"
+ *   pnpm pdf ./brief.pdf "what are the prizes"
  */
 import { readFile } from 'node:fs/promises'
 import { DEFAULT_MODEL, openrouterFetch } from '../lib/openrouter.js'
 
-const [source = 'https://orbio.so/orbio-build-week.pdf', ...rest] = process.argv.slice(2)
-const question = rest.join(' ') || 'What are the prizes, and when do they vest?'
+const [source = 'https://arxiv.org/pdf/1706.03762', ...rest] = process.argv.slice(2)
+const question = rest.join(' ') || 'In three sentences, what does this paper propose?'
 
 // A local path becomes a data URL; anything else is sent as a URL.
 const fileData = source.startsWith('http')

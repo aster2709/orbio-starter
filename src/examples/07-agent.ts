@@ -13,8 +13,8 @@ import { DEFAULT_MODEL, openrouterFetch } from '../lib/openrouter.js'
 
 const Digest = z.object({
   headline: z.string(),
-  bullets: z.array(z.string()).min(3).max(5),
-  sources: z.array(z.string().url()).min(1),
+  bullets: z.array(z.string()).describe('Three to five, each one fact.'),
+  sources: z.array(z.url()).describe('One URL per entry, copied exactly from the notes.'),
 })
 
 const topic = process.argv.slice(2).join(' ') || 'tokenised equities on Robinhood Chain'
@@ -37,7 +37,7 @@ const shaped = await openrouterFetch('/chat/completions', {
   body: JSON.stringify({
     model: DEFAULT_MODEL,
     messages: [
-      { role: 'system', content: 'Turn research notes into a digest. Only use URLs present in the notes.' },
+      { role: 'system', content: 'Turn research notes into a digest. Only use URLs present in the notes, one per entry, verbatim.' },
       { role: 'user', content: notes },
     ],
     response_format: {

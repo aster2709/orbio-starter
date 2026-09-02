@@ -1,5 +1,9 @@
-import 'dotenv/config'
+import { config } from 'dotenv'
 import OpenAI from 'openai'
+
+// `.env.local` first, `.env` as a fallback. `dotenv/config` reads only `.env`,
+// which is exactly the file the README tells you not to put a key in.
+config({ path: ['.env.local', '.env'], quiet: true })
 
 /**
  * One client, one key.

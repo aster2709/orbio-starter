@@ -9,10 +9,13 @@
 import { z } from 'zod'
 import { DEFAULT_MODEL, openrouter } from '../lib/openrouter.js'
 
+// Shape and required-ness are enforced by the provider; counts are not. Strict
+// mode guarantees you get `steps: string[]`, not how many — ask for that in the
+// description and check it yourself if it matters.
 const Brief = z.object({
   title: z.string(),
   audience: z.string(),
-  steps: z.array(z.string()).min(3).max(6),
+  steps: z.array(z.string()).describe('Three to six concrete steps, in order.'),
   risk: z.string().describe('The one thing most likely to make it fail.'),
 })
 
