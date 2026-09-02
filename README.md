@@ -69,7 +69,6 @@ Seven days, ten winners, 8M `$ORBIO`. Every approved builder gets $100 of infere
 
 - Apply → [orbio.so/build](https://orbio.so/build)
 - The brief → [orbio.so/orbio-build-week.pdf](https://orbio.so/orbio-build-week.pdf)
-- Builders on Telegram → [t.me/orbioso](https://t.me/orbioso)
 
 Orbio ships new features daily during the week. All of it is yours to use.
 
